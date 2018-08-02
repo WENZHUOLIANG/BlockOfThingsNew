@@ -9,26 +9,26 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app';
+  // title = 'app';
 
-  private apiUrl = 'https://address-book-demo.herokuapp.com/api/contacts';
-  data: any = {};
+  // private apiUrl = 'https://address-book-demo.herokuapp.com/api/contacts';
+  // data: any = {};
 
-  constructor(private http: Http){
-    console.log('hello');
-    this.getContacts();
-    this.getData();
-  }
+  // constructor(private http: Http){
+  //   console.log('hello');
+  //   this.getContacts();
+  //   this.getData();
+  // }
 
-  getData(){
-    return this.http.get(this.apiUrl)
-    //.map((res: Response) => res.json());
-  }
+  // getData(){
+  //   return this.http.get(this.apiUrl)
+  //   //.map((res: Response) => res.json());
+  // }
 
-  getContacts(){
-      this.getData().subscribe(data => {
-        console.log(data);
-        this.data = data;
-      })
-  }
+  // getContacts(){
+  //     this.getData().subscribe(data => {
+  //       console.log(data);
+  //       this.data = data;
+  //     })
+  // }
 }
