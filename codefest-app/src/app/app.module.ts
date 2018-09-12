@@ -5,8 +5,12 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { TopNavComponent } from './top-nav/top-nav.component';
 import { RightRailComponent } from './right-rail/right-rail.component';
-import { MapComponent } from './map/map.component';
-// import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { SessionComponent } from './session/session.component';
+import { NgIdleKeepaliveModule } from '@ng-idle/keepalive';
+import { HttpClientModule } from '@angular/common/http';
+import { TableComponent } from './table/table.component';
+import { AgmCoreModule } from '@agm/core';
+
 
 
 @NgModule({
@@ -14,13 +18,18 @@ import { MapComponent } from './map/map.component';
     AppComponent,
     TopNavComponent,
     RightRailComponent,
-    MapComponent
+    SessionComponent,
+    TableComponent
   ],
   imports: [
     BrowserModule,
     HttpModule,
     FormsModule,
-    // NgbModule
+    NgIdleKeepaliveModule.forRoot(),
+    HttpClientModule,
+    AgmCoreModule.forRoot({
+      // apiKey: ''
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

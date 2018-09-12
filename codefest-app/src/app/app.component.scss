@@ -32,3 +32,28 @@ span{
     color: #4f4f4f;
     padding-top: 2px;
 }
+
+#map-canvas{
+    height: 500px;
+    width: 500px;
+    border: 6px solid green;
+}
+
+.create-contract{
+    height: 44px;
+    border: 2px solid #4f4f4f;
+    font-size: 16px;
+    font-family: Oswald;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+agm-map{
+    height: 400px;
+  }
+
+  @media only screen and (max-width: 600px) {
+      .addmargin{
+          margin-top: 20px;
+      }
+  }

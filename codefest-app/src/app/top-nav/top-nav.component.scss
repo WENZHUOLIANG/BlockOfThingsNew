@@ -10,3 +10,61 @@ button{
 .navbar{
     border-radius: 0;
 }
+
+.nav-link{
+    border: 2px solid #f2f2f2;
+    color: #f2f2f2 !important;
+    padding: 8px 20px;
+    height: 40px;
+    font-size: 16px;
+    font-family: Oswald;
+    font-weight: semi-bold;
+    text-transform: uppercase;
+}
+
+.welcome{
+    font-size: 14px; 
+    color: #ffffff;
+    padding-top: 13px;
+    font-family: Roboto;
+}
+
+.changewidth{
+
+}
+
+tr{
+    cursor: pointer;
+}
+
+tr:hover{
+    background-color: #DFEDF6;
+}
+
+@media only screen and (max-width: 600px) {
+    .changewidth{
+        width: 100%;
+    }
+
+    .navbar-toggler{
+        position: relative;
+        left: 275px;
+        margin-top: 10px;
+    }
+
+    .nav-link{
+        width: 375px;
+        text-align: center;
+    }
+
+    table{
+        background-color: white;
+        width: 375px !important;
+        margin-top: 30px;
+    }
+    
+    .welcome{
+        display: none;
+    }
+
+}

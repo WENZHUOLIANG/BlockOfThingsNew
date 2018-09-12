@@ -1,35 +1,78 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="navbar-brand" style="background-color: #ffffff; padding: 5px; height: auto;"><img src="assets/USF_Logo.png" alt="" width="40" height="37"></div>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+
+  
+<div class="changewidth">
+
+    <div class="navbar-brand" style="background-color: #ffffff; padding: 5px; height: auto;"><img src="assets/USF_Logo.png" alt="" width="40" height="37"></div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+</div>
+      
+
+  
+  
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
+      <!-- <li class="nav-item active">
         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Link</a>
-      </li>
+      </li> -->
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
+        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fa fa-eye" aria-hidden="true" style="color: #f2f2f2; font-size: 18px; padding-left: 5px; padding-right: 5px;"></i>
+          View Current Contracts &nbsp; 
         </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="padding-top: 0;">
+          <!-- <a class="dropdown-item" href="#"></a>
           <a class="dropdown-item" href="#">Another action</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
+          <a class="dropdown-item" href="#">Something else here</a> -->
+
+
+            <table class="table" style="font-family: Roboto; width: 300px;">
+              <thead class="" style="background-color: #4f4f4f; color: #ffffff;">
+                <tr>
+                  <th scope="col" style="font-family: Oswald; text-align: center;">ID</th>
+                  <th scope="col" style="font-family: Oswald;">
+                    EXISTING PARTY
+                  </th>
+                </tr>
+              </thead>
+              <tbody style="font-size: 13px;">
+                <tr>
+                  <th scope="row" style="text-align: center">1</th>
+                  <td>Mahmood, Amber</td>
+                </tr>
+                <tr>
+                  <th scope="row" style="text-align: center">2</th>
+                  <td>Balasubramanian, Karthik</td>
+                </tr>
+                <tr>
+                  <th scope="row" style="text-align: center">3</th>
+                  <td>Liang, Wen</td>
+                </tr>
+                <tr>
+                  <th scope="row" style="text-align: center">4</th>
+                  <td>Kelley, Jordan</td>
+                </tr>
+                <tr>
+                    <th scope="row" style="text-align: center">5</th>
+                    <td>Donhardt, Minette</td>
+                  </tr>
+              </tbody>
+            </table>
         </div>
       </li>
       <!-- <li class="nav-item">
         <a class="nav-link disabled" href="#">Disabled</a>
       </li> -->
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
+    <form class="form-inline my-2 my-lg-0 welcome" style="float: right;">
+        <i class="fa fa-user-o" aria-hidden="true" style="margin-right: 10px"></i> Welcome, BlockChainFan4eva1
     </form>
   </div>
 </nav>

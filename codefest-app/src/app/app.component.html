@@ -1,45 +1,64 @@
 <app-top-nav> </app-top-nav>
-
+<app-session (valueChange)="getOutput($event)"></app-session>
 <div class="row" style="margin: 20px;">
   <div class="col-sm-8">
     <div class="card">
         <h5 class="card-title">CURRENT STATUS</h5>
       <div class="card-body">
-      
         <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
         <a href="#" class="btn btn-primary">Go somewhere</a> -->
 
         <div style="float:left">
-            <div class="listitem"><i class="fa fa-truck" style="font-size:22px;" aria-hidden="true"></i> <span>Truck</span></div>
-            <div class="listitem"><i class="fa fa-globe" style="font-size:22px; margin-left: 2px;"  aria-hidden="true"></i> <span style="margin-left: 1px;">Location</span></div>
-            <div class="listitem"><i class="fa fa-check-circle-o" style="font-size:22px; margin-left: 2px;"  aria-hidden="true"></i> <span style="margin-left: 1px;">Status</span></div>
-            <div class="listitem"><i class="fa fa-thermometer-empty" style="font-size:22px; margin-left: 5px;"  aria-hidden="true"></i> <span style="margin-left: 3px;">Temperature</span></div>
-            <div class="listitem"><i class="fa fa-sun-o" style="font-size:22px;" aria-hidden="true"></i> <span>Humidity</span></div>
-        </div>
-          
+          <div style="width: 200px">
+              <div class="listitem"><i class="fa fa-truck" style="font-size:22px;" aria-hidden="true"></i> <span>Truck ID :</span> <span style="float: right; font-family: Roboto;">{{id}}</span></div>
+          </div>
 
+          <div style="width: 200px">
+              <div class="listitem"><i class="fa fa-globe" style="font-size:22px; margin-left: 2px;"  aria-hidden="true"></i> <span style="margin-left: 1px;">Location :</span> <span style="float: right; font-size: 12px; font-family: Roboto; padding-top: 5px;">Chicago, IL</span></div>
+          </div>
+
+          <div style="width: 200px">
+              <div class="listitem"><i class="fa fa-check-circle-o" style="font-size:22px; margin-left: 2px;"  aria-hidden="true"></i> <span style="margin-left: 1px;">Status :</span> <span style="float: right; font-size: 12px; font-family: Roboto; padding-top: 5px;">In Compliance</span></div>
+          </div>
+
+          <div style="width: 200px">
+              <div class="listitem"><i class="fa fa-thermometer-empty" style="font-size:22px; margin-left: 5px;"  aria-hidden="true"></i> <span style="margin-left: 3px;">Temperature : </span> <span style="float: right; font-family: Roboto;">{{temp}}</span></div>
+          </div>
+
+          <div style="width: 200px">
+              <div class="listitem"><i class="fa fa-sun-o" style="font-size:22px; margin-left: 2px;" aria-hidden="true"></i> <span>Humidity :</span> <span style="float: right; font-family: Roboto;">{{hum}}</span></div>
+          </div>
+
+          <div style="width: 200px">
+              <div class="listitem"><i class="fa fa-globe" style="font-size:22px; margin-left: 2px;"  aria-hidden="true"></i> <span style="margin-left: 1px;">Details :</span> <span style="float: right; font-size: 12px; font-family: Roboto; padding-top: 5px;">{{detail}}</span></div>
+          </div>
+            
+        </div>
+        
       </div>
     </div>
 
     <div class="card" style="margin-top: 20px">
         <h5 class="card-title" style="background-color: #9f2220;">LOCATION</h5>
-      <div class="card-body">
-        map
+      <div class="card-body" style="padding: 0">
+          <agm-map [latitude]="lat" [longitude]="lng" [zoom]="15">
+              <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+          </agm-map>
       </div>
     </div>
   </div>
   <div class="col-sm-4">
-    <div class="card">
-        <h5 class="card-title">TRUCK HISTORY</h5>
+    <div class="card addmargin">
+        <h5 class="card-title">DATA HISTORY</h5>
       <div class="card-body">
         <app-right-rail></app-right-rail>
       </div>
     </div>
 
     <div class="card" style="margin-top: 20px">
-        <h5 class="card-title">OTHER CARD</h5>
+        <h5 class="card-title">CREATE NEW CONTRACT</h5>
         <div class="card-body">
-            s;dlfksd;ljf;dgjk;ldfkjgd
+            <button class="create-contract">CREATE CONTRACT</button>
         </div>
       </div>
   </div>
